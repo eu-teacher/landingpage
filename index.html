@@ -142,12 +142,20 @@ nav {
   50% { opacity: 0.5; transform: scale(0.8); }
 }
 
+.enroll-anchor {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: top;
+}
+
 .enroll-badge {
   position: absolute;
-  top: -64px;
-  left: 50%;
-  width: 96px;
-  height: 96px;
+  top: -18px;
+  left: 14px;
+  width: 92px;
+  height: 92px;
   border-radius: 50%;
   background: var(--terra);
   color: var(--white);
@@ -166,12 +174,12 @@ nav {
 }
 
 @keyframes blinkBadge {
-  0%, 100% { transform: translateX(-50%) rotate(-8deg) scale(1); opacity: 1; }
-  50% { transform: translateX(-50%) rotate(-8deg) scale(0.9); opacity: 0.55; }
+  0%, 100% { transform: rotate(-8deg) scale(1); opacity: 1; }
+  50% { transform: rotate(-8deg) scale(0.9); opacity: 0.55; }
 }
 
 @media (max-width: 600px) {
-  .enroll-badge { width: 76px; height: 76px; font-size: 9.5px; top: -50px; }
+  .enroll-badge { width: 64px; height: 64px; font-size: 8.5px; top: -10px; left: 6px; }
 }
 
 .hero h1 {
@@ -1623,10 +1631,9 @@ footer {
 <!-- HERO -->
 <section class="hero">
   <div class="hero-tag">Turmas exclusivas para mulheres</div>
-  <h1>Nas nossas aulas, você aprende inglês<br>e sai se sentindo <em>capaz</em></h1>
+  <h1>Nas nossas aulas, você aprende inglês<br>e sai se sentindo <em>capaz</em><span class="enroll-anchor"><span class="enroll-badge">Matrículas<br>abertas</span></span></h1>
   <p>Turmas pequenas, ambiente acolhedor, aulas focadas na comunicação. Aqui você fala desde a primeira aula.</p>
   <div class="hero-btns">
-    <div class="enroll-badge">Matrículas<br>abertas</div>
     <a href="#oferta" class="btn-primary">Quero minha vaga 🧡</a>
     <a href="#sobre" class="btn-ghost">Conhecer a Tainá</a>
   </div>
