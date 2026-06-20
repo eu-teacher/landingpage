@@ -813,6 +813,26 @@ nav {
 
 @media (max-width: 768px) {
   .carousel-slide { padding: 24px 20px; }
+
+  .carousel-btn {
+    position: static;
+    transform: none;
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 18px;
+  }
+
+  .carousel-dots { margin-top: 0; order: 2; }
+  .carousel-prev { order: 1; }
+  .carousel-next { order: 3; }
 }
 
 .carousel-dots {
@@ -1882,9 +1902,11 @@ footer {
           </div>
         </div>
       </div></div>
-      <button class="carousel-btn carousel-prev" onclick="moveCarousel(-1)" aria-label="Anterior">&#8592;</button>
-      <button class="carousel-btn carousel-next" onclick="moveCarousel(1)" aria-label="Próximo">&#8594;</button>
-      <div class="carousel-dots" id="carouselDots"></div>
+      <div class="carousel-controls">
+        <button class="carousel-btn carousel-prev" onclick="moveCarousel(-1)" aria-label="Anterior">&#8592;</button>
+        <div class="carousel-dots" id="carouselDots"></div>
+        <button class="carousel-btn carousel-next" onclick="moveCarousel(1)" aria-label="Próximo">&#8594;</button>
+      </div>
     </div>
     </div>
   </div>
