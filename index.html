@@ -142,6 +142,38 @@ nav {
   50% { opacity: 0.5; transform: scale(0.8); }
 }
 
+.enroll-badge {
+  position: absolute;
+  top: -64px;
+  left: 50%;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--terra);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 1.35;
+  box-shadow: 0 8px 24px rgba(184,85,46,0.4);
+  animation: blinkBadge 1.6s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes blinkBadge {
+  0%, 100% { transform: translateX(-50%) rotate(-8deg) scale(1); opacity: 1; }
+  50% { transform: translateX(-50%) rotate(-8deg) scale(0.9); opacity: 0.55; }
+}
+
+@media (max-width: 600px) {
+  .enroll-badge { width: 76px; height: 76px; font-size: 9.5px; top: -50px; }
+}
+
 .hero h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(44px, 9vw, 80px);
@@ -1594,6 +1626,7 @@ footer {
   <h1>Nas nossas aulas, você aprende inglês<br>e sai se sentindo <em>capaz</em></h1>
   <p>Turmas pequenas, ambiente acolhedor, aulas focadas na comunicação. Aqui você fala desde a primeira aula.</p>
   <div class="hero-btns">
+    <div class="enroll-badge">Matrículas<br>abertas</div>
     <a href="#oferta" class="btn-primary">Quero minha vaga 🧡</a>
     <a href="#sobre" class="btn-ghost">Conhecer a Tainá</a>
   </div>
