@@ -1596,9 +1596,8 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">Tainá <span>Dutra</span></div>
+  <div class="nav-logo"><img src="logo.svg" alt="Tainá Dutra" style="height:44px;display:block;"></div>
   <div style="display:flex;align-items:center;gap:12px">
-    <a href="nivelamento.html" style="font-size:13px;font-weight:700;color:var(--graphite-soft);text-decoration:none;white-space:nowrap">Teste de nível</a>
     <a href="#oferta" class="nav-cta">Quero uma vaga</a>
   </div>
 </nav>
@@ -1873,7 +1872,7 @@ footer {
             <p class="offer-price"><strong>R$247</strong><span style="font-size:18px;color:var(--graphite-soft)">/mês</span></p>
             <p class="offer-price-note">por pessoa</p>
           </div>
-          <a href="https://wa.me/55SEUNUMERO?text=Oi%20Tain%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Turma%20Tain%C3%A1%20🧡" class="offer-cta" target="_blank">
+          <a href="#inscricao" class="offer-cta">
             Quero garantir minha vaga no próximo grupo 🧡
           </a>
           <p class="offer-guarantee">🔒 Você conversa com a Tainá antes de qualquer compromisso.</p>
@@ -1905,7 +1904,7 @@ footer {
             <p class="offer-price"><strong>R$297</strong><span style="font-size:18px;color:var(--graphite-soft)">/mês</span></p>
             <p class="offer-price-note">por pessoa</p>
           </div>
-          <a href="https://wa.me/55SEUNUMERO?text=Oi%20Tain%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20aula%20em%20dupla%20%F0%9F%A7%A1" class="offer-cta" target="_blank">
+          <a href="#inscricao" class="offer-cta">
             Quero fazer em dupla 🧡
           </a>
           <p class="offer-guarantee">🔒 Você conversa com a Tainá antes de qualquer compromisso.</p>
@@ -1937,7 +1936,7 @@ footer {
             <p class="offer-price"><strong>R$397</strong><span style="font-size:18px;color:var(--graphite-soft)">/mês</span></p>
             <p class="offer-price-note">Pacote semestral</p>
           </div>
-          <a href="https://wa.me/55SEUNUMERO?text=Oi%20Tain%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20aula%20individual%20%F0%9F%A7%A1" class="offer-cta" target="_blank">
+          <a href="#inscricao" class="offer-cta">
             Quero minha aula particular 🧡
           </a>
           <p class="offer-guarantee">🔒 Você conversa com a Tainá antes de qualquer compromisso.</p>
@@ -2013,8 +2012,8 @@ footer {
   <p class="section-tag">Última chamada</p>
   <h2>Chega de esperar o momento certo.<br>Ele é <em>agora.</em></h2>
   <p>A próxima turma está formando. Sua vaga pode estar aqui.</p>
-  <a href="https://wa.me/55SEUNUMERO?text=Oi%20Tain%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Turma%20Tain%C3%A1%20🧡" class="btn-white" target="_blank">
-    Falar comigo no WhatsApp 🧡
+  <a href="#inscricao" class="btn-white">
+    Quero garantir minha vaga 🧡
   </a>
 </section>
 
@@ -2053,6 +2052,16 @@ footer {
               <option>Avançado, quero refinar e praticar mais</option>
             </select>
           </div>
+        </div>
+
+        <div class="form-group full">
+          <label>Qual modalidade te interessa?</label>
+          <select required>
+            <option value="" disabled selected>Escolha uma opção</option>
+            <option>Grupo (até 6 alunas) — R$247/mês</option>
+            <option>Dupla (você e mais uma amiga) — R$297/mês</option>
+            <option>Particular (só você e a Tainá) — R$397/mês</option>
+          </select>
         </div>
 
         <div class="form-group full">
