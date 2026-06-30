@@ -2041,22 +2041,22 @@ footer {
         <div class="form-row">
           <div class="form-group">
             <label>Seu nome completo</label>
-            <input type="text" placeholder="Como posso te chamar?" required>
+            <input type="text" name="nome" placeholder="Como posso te chamar?" required>
           </div>
           <div class="form-group">
             <label>WhatsApp</label>
-            <input type="tel" placeholder="(00) 00000-0000" required>
+            <input type="tel" name="whatsapp" placeholder="(00) 00000-0000" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label>E-mail</label>
-            <input type="email" placeholder="seu@email.com" required>
+            <input type="email" name="email" placeholder="seu@email.com" required>
           </div>
           <div class="form-group">
             <label>Qual seu nível de inglês?</label>
-            <select required>
+            <select name="nivel" required>
               <option value="" disabled selected>Escolha uma opção</option>
               <option>Nunca estudei de verdade</option>
               <option>Básico, sei algumas palavras e frases</option>
@@ -2068,7 +2068,7 @@ footer {
 
         <div class="form-group full">
           <label>Qual modalidade te interessa?</label>
-          <select required>
+          <select name="modalidade" required>
             <option value="" disabled selected>Escolha uma opção</option>
             <option>Grupo (até 6 alunas) — R$247/mês</option>
             <option>Dupla (você e mais uma amiga) — R$297/mês</option>
@@ -2079,9 +2079,9 @@ footer {
         <div class="form-group full">
           <label>Qual horário funciona melhor pra você?</label>
           <div class="checkbox-group">
-            <label class="checkbox-label"><input type="checkbox"> Manhã (9h–12h)</label>
-            <label class="checkbox-label"><input type="checkbox"> Tarde (13h–18h)</label>
-            <label class="checkbox-label"><input type="checkbox"> Noite (18h–21h)</label>
+            <label class="checkbox-label"><input type="checkbox" name="horario[]" value="Manha"> Manhã (9h–12h)</label>
+            <label class="checkbox-label"><input type="checkbox" name="horario[]" value="Tarde"> Tarde (13h–18h)</label>
+            <label class="checkbox-label"><input type="checkbox" name="horario[]" value="Noite"> Noite (18h–21h)</label>
           </div>
         </div>
 
@@ -2133,7 +2133,27 @@ function toggleFaq(btn) {
 // Form submit
 function handleSubmit(e) {
   e.preventDefault();
-  document.querySelector('.form-card form').style.display = 'none';
+  const form = e.target;
+  const formData = new FormData(form);
+  const horarios = [];
+  form.querySelectorAll('input[name="horario[]"]').forEach(cb => {
+    if (cb.checked) horarios.push(cb.value);
+  });
+  const data = {
+    nome: formData.get('nome') || '',
+    whatsapp: formData.get('whatsapp') || '',
+    email: formData.get('email') || '',
+    nivel: formData.get('nivel') || '',
+    modalidade: formData.get('modalidade') || '',
+    horario: horarios.join(', ')
+  };
+  fetch('https://script.google.com/macros/s/AKfycbyNV97CkxF9Bx3GjGqJxFS81Lms67d_ufZ9S55YM4vg4Dp_Nh8I71dty_w5ixxK20_3/exec', {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain' },
+    body: JSON.stringify(data)
+  }).catch(() => {});
+  form.style.display = 'none';
   document.getElementById('formSuccess').style.display = 'block';
 }
 
@@ -2242,5 +2262,4 @@ window.addEventListener('scroll', () => {
 
 </script>
 
-</body>
-</html>
+</
