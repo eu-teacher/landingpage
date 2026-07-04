@@ -110,27 +110,38 @@ nav {
   background: radial-gradient(circle, rgba(168,181,160,0.25) 0%, transparent 70%);
 }
 
-.hero-badge-prematricula {
+.capaz-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.badge-prematricula {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
   background: var(--terra);
   color: #fff;
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  padding: 7px 16px;
+  padding: 6px 14px;
   border-radius: 50px;
-  margin-bottom: 14px;
+  white-space: nowrap;
+  font-family: var(--font-sans);
 }
 
-.hero-badge-dot {
+.badge-prematricula-dot {
   width: 7px;
   height: 7px;
   background: #fff;
   border-radius: 50%;
   display: inline-block;
+  flex-shrink: 0;
   animation: pulse 1.5s infinite;
 }
 
@@ -1629,12 +1640,8 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge-prematricula">
-    <span class="hero-badge-dot"></span>
-    Pré-matrículas abertas
-  </div>
   <div class="hero-tag">Turmas exclusivas para mulheres</div>
-  <h1>O lugar onde você aprende inglês<br>e sai se sentindo <em>capaz.</em></h1>
+  <h1>O lugar onde você aprende inglês<br>e sai se sentindo <span class="capaz-wrapper"><span class="badge-prematricula"><span class="badge-prematricula-dot"></span>Pré-matrículas abertas</span><em>capaz.</em></span></h1>
   <p>Turmas pequenas, ambiente acolhedor e um método focado na vida real.</p>
   <div class="hero-btns">
     <a href="#oferta" class="btn-primary">Quero minha vaga</a>
