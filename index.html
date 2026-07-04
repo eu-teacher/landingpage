@@ -110,6 +110,30 @@ nav {
   background: radial-gradient(circle, rgba(168,181,160,0.25) 0%, transparent 70%);
 }
 
+.hero-badge-prematricula {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--terra);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+}
+
+.hero-badge-dot {
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+}
+
 .hero-tag {
   display: inline-flex;
   align-items: center;
@@ -1605,6 +1629,10 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-badge-prematricula">
+    <span class="hero-badge-dot"></span>
+    Pré-matrículas abertas
+  </div>
   <div class="hero-tag">Turmas exclusivas para mulheres</div>
   <h1>O lugar onde você aprende inglês<br>e sai se sentindo <em>capaz.</em></h1>
   <p>Turmas pequenas, ambiente acolhedor e um método focado na vida real.</p>
